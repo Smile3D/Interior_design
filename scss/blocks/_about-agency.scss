@@ -1,0 +1,53 @@
+.about-agency {
+	padding: 20px 0;
+
+	@include media('>=tablet') {
+		padding: 40px 0;
+	}
+
+	@include media('>=desktop') {
+		padding: 50px 0;
+	}
+
+	@include media('>=widescreen') {
+		padding: 77px 0 67px;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 0 0 20px;
+
+		@include media('>=tablet') {
+			margin: 0 0 43px;
+		}
+	}
+
+	.content-holder {
+		@include media('>=widescreen') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.image-holder {
+		margin: 0 0 15px;
+
+		@include media('>=widescreen') {
+			margin: 0;
+			max-width: 570px;
+		}
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.wysiwyg {
+		@include media('>=widescreen') {
+			max-width: 566px;
+			margin: -6px 0 0 29px;
+		}
+	}
+}

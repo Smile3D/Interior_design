@@ -1,0 +1,44 @@
+.hero-banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-position: 50% 44%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	padding: 25px 0;
+
+	@include media('>=tablet') {
+		padding: 50px 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: rgba(#000, .5);
+	}
+
+	.container {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.hero-text {
+	position: relative;
+	z-index: 1;
+	
+	h1 {
+		color: $white;
+		margin: 0 0 10px;
+
+		@include media('>=tablet') {
+			margin: 0 0 21px;
+		}
+	}
+}

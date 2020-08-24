@@ -1,0 +1,42 @@
+.breadcrumb {
+	@extend %listreset;
+
+	.breadcrumb-item {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		padding: 0 13px;
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+
+		&.active {
+			color: $yellow;
+		}
+
+		&:after {
+			content: "\e904";
+			font-family: 'icomoon' !important;
+			font-size: 14px;
+			color: $white;
+			position: absolute;
+			right: -8px;
+			top: 3px;
+		}
+	}
+
+	a {
+		@include animate(color);
+
+		text-decoration: none;
+		color: #e0e0e0;
+		font-size: 16px;
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+}

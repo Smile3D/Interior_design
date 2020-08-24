@@ -1,0 +1,76 @@
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+h1 {
+	@include media('>=tablet') {
+		font-size: 60px;
+	}
+}
+
+h2 {
+	letter-spacing: .2px;
+
+	@include media('>=tablet') {
+		font-size: 35px;
+	}
+}
+
+h3 {
+	margin: 0 0 21px;
+
+	@include media('>=tablet') {
+		font-size: 20px;
+	}
+}
+
+h4 {
+	@include media('>=tablet') {
+		font-size: 18px;
+	}
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 15px;
+}
+
+.wysiwyg {
+	p {
+		margin: 0 0 21px;
+
+		+ p {
+			margin: 0 0 30px;
+		}
+	}
+}
+
+ul:not([class]):not([id]) {
+	@extend %listreset;
+
+	li {
+		position: relative;
+		padding: 0 0 0 31px;
+		margin: 0 0 11px;
+
+		&:before {
+			content: "\e905";
+			font-family: 'icomoon' !important;
+			font-size: 14px;
+			color: $yellow;
+			position: absolute;
+			left: 10px;
+			top: 1px;
+		}
+	}
+}
